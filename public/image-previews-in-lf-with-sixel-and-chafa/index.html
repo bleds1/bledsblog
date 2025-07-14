@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Image previews in lf with sixel and chafa | 🌀 bledleys blog</title>
+<meta name="title" content="Image previews in lf with sixel and chafa" />
+<meta name="description" content="
+Despite swearing by ranger for quite a few years I am a recent convert to the very similar lf file manager. It just feels a little lighter, faster and simpler and lets me fly around my system super fast. Today I finally got image previews working and very nicely too. I can do away with Ranger and the no longer maintained ueberzug for terminal image previews.
+The answer for me was that I needed to install chafa. You may also need to install libsixel - I already had this installed so maybe go look into that. We need to make a previewer script that uses chafa for pictures and bat when it&rsquo;s text/not an image file. bat gives you nicely coloured previews of text files with syntax highlighting. I&rsquo;m using the foot terminal on Wayland in hyprland and on Arch Linux. If you want to implement it this way you will need to use a terminal with sixel support" />
+<meta name="keywords" content="linux,lf," />
+
+
+<meta property="og:url" content="http://localhost:1313/image-previews-in-lf-with-sixel-and-chafa/">
+  <meta property="og:site_name" content="🌀 bledleys blog">
+  <meta property="og:title" content="Image previews in lf with sixel and chafa">
+  <meta property="og:description" content="Despite swearing by ranger for quite a few years I am a recent convert to the very similar lf file manager. It just feels a little lighter, faster and simpler and lets me fly around my system super fast. Today I finally got image previews working and very nicely too. I can do away with Ranger and the no longer maintained ueberzug for terminal image previews.
+The answer for me was that I needed to install chafa. You may also need to install libsixel - I already had this installed so maybe go look into that. We need to make a previewer script that uses chafa for pictures and bat when it’s text/not an image file. bat gives you nicely coloured previews of text files with syntax highlighting. I’m using the foot terminal on Wayland in hyprland and on Arch Linux. If you want to implement it this way you will need to use a terminal with sixel support">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-03-26T11:55:25+00:00">
+    <meta property="article:modified_time" content="2025-03-26T11:55:25+00:00">
+    <meta property="article:tag" content="Linux">
+    <meta property="article:tag" content="Lf">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Image previews in lf with sixel and chafa">
+  <meta name="twitter:description" content="Despite swearing by ranger for quite a few years I am a recent convert to the very similar lf file manager. It just feels a little lighter, faster and simpler and lets me fly around my system super fast. Today I finally got image previews working and very nicely too. I can do away with Ranger and the no longer maintained ueberzug for terminal image previews.
+The answer for me was that I needed to install chafa. You may also need to install libsixel - I already had this installed so maybe go look into that. We need to make a previewer script that uses chafa for pictures and bat when it’s text/not an image file. bat gives you nicely coloured previews of text files with syntax highlighting. I’m using the foot terminal on Wayland in hyprland and on Arch Linux. If you want to implement it this way you will need to use a terminal with sixel support">
+
+
+
+
+  <meta itemprop="name" content="Image previews in lf with sixel and chafa">
+  <meta itemprop="description" content="Despite swearing by ranger for quite a few years I am a recent convert to the very similar lf file manager. It just feels a little lighter, faster and simpler and lets me fly around my system super fast. Today I finally got image previews working and very nicely too. I can do away with Ranger and the no longer maintained ueberzug for terminal image previews.
+The answer for me was that I needed to install chafa. You may also need to install libsixel - I already had this installed so maybe go look into that. We need to make a previewer script that uses chafa for pictures and bat when it’s text/not an image file. bat gives you nicely coloured previews of text files with syntax highlighting. I’m using the foot terminal on Wayland in hyprland and on Arch Linux. If you want to implement it this way you will need to use a terminal with sixel support">
+  <meta itemprop="datePublished" content="2025-03-26T11:55:25+00:00">
+  <meta itemprop="dateModified" content="2025-03-26T11:55:25+00:00">
+  <meta itemprop="wordCount" content="387">
+  <meta itemprop="keywords" content="Linux,Lf">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>🌀 bledleys blog</h2>
+</a>
+<nav>
+<a href="/hugo/">Hugo</a>
+
+<a href="/bear/">Bear</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Image previews in lf with sixel and chafa</h1>
+<p>
+  <i>
+    <time datetime='2025-03-26'>
+      26 Mar, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p><img src="/2025-03-26-image-previews-in-lf-file-manager/screenshot1.png" alt="Image 1"></p>
+<p>Despite swearing by <a href="https://github.com/ranger/ranger">ranger</a> for quite a few years I am a recent convert to the very similar <a href="https://github.com/gokcehan/lf">lf file manager</a>. It just feels a little lighter, faster and simpler and lets me fly around my system super fast. Today I finally got image previews working and very nicely too. I can do away with Ranger and the no longer maintained <a href="https://github.com/seebye/ueberzug">ueberzug</a> for terminal image previews.</p>
+<p>The answer for me was that I needed to install <a href="https://github.com/hpjansson/chafa">chafa</a>. You may also need to install libsixel - I already had this installed so maybe go look into that. We need to make a previewer script that uses chafa for pictures and bat when it&rsquo;s text/not an image file. <a href="https://github.com/sharkdp/bat">bat</a> gives you nicely coloured previews of text files with syntax highlighting. I&rsquo;m using the <a href="https://codeberg.org/dnkl/foot">foot terminal</a> on Wayland in <a href="https://hyprland.org/">hyprland</a> and on Arch Linux. If you want to implement it this way you will need to use a terminal with <a href="https://www.arewesixelyet.com/">sixel support</a></p>
+<p><img src="/2025-03-26-image-previews-in-lf-file-manager/screenshot2.png" alt="Image 2"></p>
+<p>Feel free to use this code below or check out my dotfiles repo on <a href="https://github.com/bleds1/dotfiles">GitHub</a></p>
+<p>First up install chafa via your package manager. On Arch Linux you should find this in the regular repos. Installation may vary on different distros.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    sudo pacman -S chafa
+</span></span></code></pre></div><p>Next up create a bash script. I&rsquo;ve called it pv.sh but name it as you like. It can be placed in any directory so long as you include it&rsquo;s full path in your lf config. I keep my scripts in a <em>~/.scripts</em> folder or sometimes in <em>~/.local/bin</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>    <span style="color:#60a0b0;font-style:italic">#!/bin/sh</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>    <span style="color:#60a0b0;font-style:italic"># use chafa/sixel to preview images in lf. If it&#39;s not an image use bat with colour</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>    <span style="color:#60a0b0;font-style:italic"># chmod +x on the command line to make the script executable.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>    <span style="color:#007020;font-weight:bold">case</span> <span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">$(</span>file -Lb --mime-type -- <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$1</span><span style="color:#4070a0">&#34;</span><span style="color:#007020;font-weight:bold">)</span><span style="color:#4070a0">&#34;</span> in
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>        image/*<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            chafa -f sixel -s <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$2</span><span style="color:#4070a0">x</span><span style="color:#bb60d5">$3</span><span style="color:#4070a0">&#34;</span> --animate off --polite on <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$1</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>            <span style="color:#007020">exit</span> <span style="color:#40a070">1</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>            ;;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>        *<span style="color:#666">)</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>            bat --color<span style="color:#666">=</span>always --style<span style="color:#666">=</span><span style="color:#4070a0">&#34;numbers,snip&#34;</span> <span style="color:#4070a0">&#34;</span><span style="color:#bb60d5">$1</span><span style="color:#4070a0">&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>            ;;
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>    <span style="color:#007020;font-weight:bold">esac</span>
+</span></span></code></pre></div><p>Now in your lf config <em>(~/.config/lfrc)</em> you will need the following options set. Save and launch a new instance of lf and you should be in business.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    <span style="color:#007020">set</span> preview <span style="color:#007020">true</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>    <span style="color:#007020">set</span> previewer ~/.config/lf/pv.sh <span style="color:#60a0b0;font-style:italic">#full path the above script</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>    <span style="color:#007020">set</span> sixel <span style="color:#007020">true</span>
+</span></span></code></pre></div><p><a href="mailto:bledley@posteo.com">✉️Reply by Email</a></p>
+<p><a href="https://bledley.xyz/index.xml">📰  Subscribe with RSS</a></p>
+<h2 id="related-posts">Related Posts</h2>
+<p><a href="/posts/2025-03-23-significantly-reduce-video-size-with-ffmpeg/">Significantly reduce video file size with ffmpeg</a></p>
+<p><a href="/posts/2023-01-27-getting-started-with-doom-emacs/">Getting Started with Doom Emacs</a></p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/linux/">#Linux</a>
+  
+  <a href="http://localhost:1313/blog/lf/">#Lf</a>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+  
+</body>
+
+</html>

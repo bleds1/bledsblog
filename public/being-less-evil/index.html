@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Being Less Evil | 🌀 bledleys blog</title>
+<meta name="title" content="Being Less Evil" />
+<meta name="description" content="
+Something unexpected has happened. I&rsquo;m not sure what possessed me to undertake this but I have disabled &rsquo;evil-mode&rsquo; in Doom Emacs. Curiosity I suppose? maybe the chance to learn more about Emacs through understanding it&rsquo;s default behaviours? As a long time evil user I guess I just wanted a little change..
+I&rsquo;ve used evil-mode/vim keybindings in pretty much all my programs for several years. I got into Emacs because Doom made it accessible to me. This kind of navigation is quite deeply ingrained, so at first did feel like I was committing some kind of blasphemy." />
+<meta name="keywords" content="emacs,linux," />
+
+
+<meta property="og:url" content="http://localhost:1313/being-less-evil/">
+  <meta property="og:site_name" content="🌀 bledleys blog">
+  <meta property="og:title" content="Being Less Evil">
+  <meta property="og:description" content="Something unexpected has happened. I’m not sure what possessed me to undertake this but I have disabled ’evil-mode’ in Doom Emacs. Curiosity I suppose? maybe the chance to learn more about Emacs through understanding it’s default behaviours? As a long time evil user I guess I just wanted a little change..
+I’ve used evil-mode/vim keybindings in pretty much all my programs for several years. I got into Emacs because Doom made it accessible to me. This kind of navigation is quite deeply ingrained, so at first did feel like I was committing some kind of blasphemy.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-07-08T14:18:09+01:00">
+    <meta property="article:modified_time" content="2025-07-08T14:18:09+01:00">
+    <meta property="article:tag" content="Emacs">
+    <meta property="article:tag" content="Linux">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Being Less Evil">
+  <meta name="twitter:description" content="Something unexpected has happened. I’m not sure what possessed me to undertake this but I have disabled ’evil-mode’ in Doom Emacs. Curiosity I suppose? maybe the chance to learn more about Emacs through understanding it’s default behaviours? As a long time evil user I guess I just wanted a little change..
+I’ve used evil-mode/vim keybindings in pretty much all my programs for several years. I got into Emacs because Doom made it accessible to me. This kind of navigation is quite deeply ingrained, so at first did feel like I was committing some kind of blasphemy.">
+
+
+
+
+  <meta itemprop="name" content="Being Less Evil">
+  <meta itemprop="description" content="Something unexpected has happened. I’m not sure what possessed me to undertake this but I have disabled ’evil-mode’ in Doom Emacs. Curiosity I suppose? maybe the chance to learn more about Emacs through understanding it’s default behaviours? As a long time evil user I guess I just wanted a little change..
+I’ve used evil-mode/vim keybindings in pretty much all my programs for several years. I got into Emacs because Doom made it accessible to me. This kind of navigation is quite deeply ingrained, so at first did feel like I was committing some kind of blasphemy.">
+  <meta itemprop="datePublished" content="2025-07-08T14:18:09+01:00">
+  <meta itemprop="dateModified" content="2025-07-08T14:18:09+01:00">
+  <meta itemprop="wordCount" content="806">
+  <meta itemprop="keywords" content="Emacs,Linux">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>🌀 bledleys blog</h2>
+</a>
+<nav>
+<a href="/hugo/">Hugo</a>
+
+<a href="/bear/">Bear</a>
+
+<a href="/blog/">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Being Less Evil</h1>
+<p>
+  <i>
+    <time datetime='2025-07-08'>
+      08 Jul, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p><img src="/2025-07-08-being-less-evil/202507091223-emacs-grim.jpg" alt="Image 1"></p>
+<p>Something unexpected has happened. I&rsquo;m not sure what possessed me to undertake this but I have disabled <a href="https://github.com/emacs-evil/evil">&rsquo;evil-mode&rsquo;</a> in <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a>. Curiosity I suppose? maybe the chance to learn more about Emacs through understanding it&rsquo;s default behaviours? As a long time evil user I guess I just wanted a little change..</p>
+<p>I&rsquo;ve used evil-mode/vim keybindings in pretty much all my programs for several years. I got into Emacs because Doom made it accessible to me. This kind of navigation is quite deeply ingrained, so at first did feel like I was committing some kind of blasphemy.</p>
+<p>My first attempt at this admittedly felt uncomfortable. Although there were some behaviours I was enjoying.. jumping from Emacs to my browser, regularly used apps and basic navigation in my window manager felt jarring. Nearly everything on my system was set up to use the evil binds! The context switch was awkward and it was breaking my unified environment. I only lasted 24 hours before re-enabling evil mode.</p>
+<p>After a little reflection I realised that I&rsquo;d not really given it a fair crack of the whip. I made things feel smoother by changing some settings in <a href="https://github.com/qutebrowser/qutebrowser">Qutebrowser</a> to make navigation feel more &lsquo;Emacsy&rsquo;. Initially as simple as just switching my usual <em>&lsquo;h,j,k,l&rsquo;</em> navigation to <em>&lsquo;C-n&rsquo;, &lsquo;C-p&rsquo;</em>, <em>&lsquo;M-v&rsquo;</em>, <em>&lsquo;C-v&rsquo;</em> etc. I disabled vim navigation keys in my window manager too to bring it inline with this kind of movement. My usual <em>&lsquo;Super Q&rsquo;</em> to <em>&lsquo;quit&rsquo;</em> became <em>&lsquo;Super K&rsquo;</em> to <em>&lsquo;Kill&rsquo;</em> for example. With a little more consistency across programs I felt ready to make a real go of it.</p>
+<p>Disabling evil mode in Doom Emacs is very simple.. just comment out the evil package in <em>&lsquo;init.el&rsquo;</em>.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#60a0b0;font-style:italic">;; (evil +everywhere)</span>
+</span></span></code></pre></div><p>After a <em>&lsquo;doom sync&rsquo;</em> on the command line and relaunching I was initially presented with a bunch of errors. My configuration had many references to <em>&rsquo;evil&rsquo;</em> and <em>&rsquo;leader&rsquo;</em> keys which I had to comment out for the file to be successfully evaluated. I decided to use this opportunity to remove those and explore the default key-binds. Later I could slowly adapt and reintroduce some of my most used actions. Many of those default Doom keys that where previously mapped to <em>&rsquo;leader&rsquo;</em> something you will find have changed to <em>&lsquo;C-c&rsquo;</em> something. Anything evil you set as a custom bind personally will probably need adaptation.</p>
+<p>With a few days adjustment I&rsquo;ve got to say I&rsquo;m starting to really like and feel familiar with the default bindings and behaviour. One of my bug bears with evil was that in navigating org buffers, there was some odd behaviour. I mostly write in org-mode with headings and paragraphs. Moving to the next and previous line does not always work as expected. It&rsquo;s tricky to explain.. you can turn on visual line mode to truly treat <em>&lsquo;j,k&rsquo;</em> as going to the next visual line but that messes up the format and makes every line a bulleted header. I&rsquo;m sure there are other hacks you could implement but default Emacs <em>&lsquo;C-n&rsquo;</em>, <em>&lsquo;C-p&rsquo;</em> behaves exactly as I&rsquo;d expect. I&rsquo;ve also found I like the way <em>&lsquo;killing&rsquo;</em>, <em>&lsquo;marking&rsquo;</em> and <em>&lsquo;zapping&rsquo;</em> works. There&rsquo;s also a few packages I use which don&rsquo;t fully accommodate evil that now feel much more native and natural.</p>
+<p>So, I will be continuing with the default bindings. Are there more key presses? ..yes. Is my pinky finger getting a bit more of a workout? ..yep.. but I don&rsquo;t really mind. It makes a nice change to not be hammering the Escape key constantly..I was addicted to doing that.. I&rsquo;d find myself hammering <em>&lsquo;Esc&rsquo;</em> for no reason in many other programs too. Is it as efficient as evil? I think it can be, with practice and familiarity, the binds are perhaps not quite as minimal and elegant but it does feels right and well thought out in the Emacs environment. Will I return to evil mode? I wouldn&rsquo;t rule that out either.. but I&rsquo;m giving default a really good long go and liking it a lot currently.</p>
+<p>It&rsquo;s a bit like picking up and learning a new game. You don&rsquo;t know the buttons at first. Slowly but surely, through playing around and experimentation you start to figure out how the game works. Before you know it you&rsquo;re fluid and automatic with the controls and don&rsquo;t even think about it any more.</p>
+<p>There&rsquo;s a huge amount of learning materials about out there online but the majority of it is based around the default key-binds. I was feeling a bit like I&rsquo;d absorbed all the Doom content out there. I&rsquo;m currently looking at <a href="https://www.masteringemacs.org/">Mickey Peterson&rsquo;s Mastering Emacs</a> book and watching video content from <a href="https://protesilaos.com/">Protesilaos</a> and <a href="https://systemcrafters.net/">System Crafters</a>.. there&rsquo;s so many things to learn about Emacs that have just opened up to me.</p>
+<p><a href="mailto:bledley@posteo.com">✉️Reply by Email</a></p>
+<p><a href="https://bledley.xyz/index.xml">📰  Subscribe with RSS</a></p>
+<h2 id="related">Related</h2>
+<p><a href="/posts/2025-06-25-how-i-use-org-mode-part-one/">How I use Org-Mode Part One</a></p>
+<p><a href="/posts/2023-01-27-getting-started-with-doom-emacs/">Getting Started with Doom Emacs</a></p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/emacs/">#Emacs</a>
+  
+  <a href="http://localhost:1313/blog/linux/">#Linux</a>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+  
+</body>
+
+</html>

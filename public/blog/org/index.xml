@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Org on 🌀 bledleys blog</title>
+    <link>http://localhost:1313/blog/org/</link>
+    <description>Recent content in Org on 🌀 bledleys blog</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <copyright>copyright 🄯 2025, bledley.</copyright>
+    <lastBuildDate>Wed, 25 Jun 2025 11:40:08 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/org/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How I Use Org Mode Part One</title>
+      <link>http://localhost:1313/how-i-use-org-mode-part-one/</link>
+      <pubDate>Wed, 25 Jun 2025 11:40:08 +0100</pubDate>
+      <guid>http://localhost:1313/how-i-use-org-mode-part-one/</guid>
+      <description>&lt;p&gt;Since the last time I wrote about &lt;a href=&#34;https://orgmode.org/&#34;&gt;Org mode&lt;/a&gt; and my &lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34;&gt;Doom Emacs&lt;/a&gt; set up I feel like some things will have changed. In fact, who am I kidding.. it&amp;rsquo;s always changing. The basic principles of my &lt;a href=&#34;https://gettingthingsdone.com/&#34;&gt;GTD&lt;/a&gt; and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I&amp;rsquo;m at a good place to record my current process and way of working here.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Weeknotes on 🌀 bledleys blog</title>
+    <link>http://localhost:1313/blog/weeknotes/</link>
+    <description>Recent content in Weeknotes on 🌀 bledleys blog</description>
+    <generator>Hugo</generator>
+    <language>en-gb</language>
+    <copyright>copyright 🄯 2025, bledley.</copyright>
+    <lastBuildDate>Sun, 13 Jul 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/blog/weeknotes/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week Notes 2025-W28</title>
+      <link>http://localhost:1313/week-notes-2025-w28/</link>
+      <pubDate>Sun, 13 Jul 2025 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/week-notes-2025-w28/</guid>
+      <description>&lt;h2 id=&#34;wins-&#34;&gt;Wins ⭐&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Created a series of promotional posts, bio&amp;rsquo;s and images for performers at a &lt;a href=&#34;https://www.ticketsource.co.uk/navigators-art-performance/yo-underground-4/e-ajgyzm&#34;&gt;gig&lt;/a&gt; next week&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Implemented an invisible &lt;a href=&#34;https://github.com/Alexays/Waybar&#34;&gt;Waybar&lt;/a&gt; module that calls my email syncing script. It calls &lt;a href=&#34;https://isync.sourceforge.io/mbsync.html&#34;&gt;mbsync&lt;/a&gt; and does some initial &lt;a href=&#34;https://notmuchmail.org/&#34;&gt;notmuch&lt;/a&gt; tagging. Another custom module shows a simple indicator for new and unread mail.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Adding many blogs, socials accounts and YouTube channels to my &lt;a href=&#34;https://github.com/skeeto/elfeed&#34;&gt;RSS reader&lt;/a&gt; to seriously reduce use of distracting, bloated websites.&lt;/p&gt;&#xA;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;reading-&#34;&gt;Reading 📚&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Finished reading &lt;a href=&#34;https://www.masteringemacs.org/&#34;&gt;Mastering Emacs by Mickey Peterson&lt;/a&gt;. I did skim over some parts as this is more of a reference book.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;writing-&#34;&gt;Writing ✍🏻&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Posted to the blog &lt;a href=&#34;https://bledley.xyz/posts/2025-07-08-being-less-evil/&#34;&gt;&amp;lsquo;Being Less Evil&amp;rsquo;&lt;/a&gt; about disabling evil-mode in &lt;a href=&#34;https://github.com/doomemacs/doomemacs&#34;&gt;Doom Emacs&lt;/a&gt;.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;health-&#34;&gt;Health 💪🏻&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;I got a couple of short but fairly lame runs in. The heat has been pretty wild this week. If I don&amp;rsquo;t get out early I&amp;rsquo;ll likely not go at all.&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;watching-&#34;&gt;Watching 📽&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&#xA;&lt;p&gt;Watched PSG v Real Madrid but tuned in late and missed all the goals.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
