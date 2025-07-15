@@ -18,7 +18,7 @@ I managed to get a 5 gig file down to under 500 mb! with absolutely no noticeabl
 ffmpeg -i input.mp4  -vcodec libx265 -crf 28 output.mp4
 ```
 
-*Related: [Image previews in lf file manager](/blog/2025-03-26-images-previews-in-lf-file-manager/)*
+*Related: [Image previews in lf file manager](https://bledley.xyz/2025-03-26-images-previews-in-lf-file-manager)*
 
 ---
 

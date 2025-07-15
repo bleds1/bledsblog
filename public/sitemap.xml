@@ -4,13 +4,19 @@
   <url>
     <loc>http://localhost:1313/follow/</loc>
   </url><url>
+    <loc>http://localhost:1313/</loc>
+    <lastmod>2025-07-15T19:28:41+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/film/</loc>
+    <lastmod>2025-07-15T19:28:41+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/im-ditching-letterboxd/</loc>
+    <lastmod>2025-07-15T19:28:41+01:00</lastmod>
+  </url><url>
     <loc>http://localhost:1313/a-new-theme-a-new-hope/</loc>
     <lastmod>2025-07-15T11:34:54+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/bear/</loc>
-    <lastmod>2025-07-15T11:34:54+01:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/</loc>
     <lastmod>2025-07-15T11:34:54+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/git/</loc>
@@ -36,6 +42,9 @@
   </url><url>
     <loc>http://localhost:1313/blog/linux/</loc>
     <lastmod>2025-07-08T14:18:09+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/how-i-take-notes-with-org-roam/</loc>
+    <lastmod>2025-07-01T12:47:09+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/how-im-using-org-mode/</loc>
     <lastmod>2025-06-25T11:40:08+01:00</lastmod>

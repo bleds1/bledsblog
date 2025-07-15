@@ -27,7 +27,7 @@ I've got some ideas brewing for [Youtube videos](https://www.youtube.com/@bledle
 
 Including above some rough around the edges study stuff in [Krita](https://krita.org/en/).
 
-*Related: [Drawing & Painting in Krita: YouTube](/blog/2024-08-12-drawing-and-painting-in-krita-youtube)*
+*Related: [Drawing & Painting in Krita: YouTube](https://bledley.xyz/2024-08-12-drawing-and-painting-in-krita-youtube)*
 
 ---
 

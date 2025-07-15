@@ -13,7 +13,8 @@ In [Part One](https://youtu.be/f5pQRD5O4B0) of this series I show my process in 
 
 I'm using Krita mostly because this is the easiest way for me to make videos right now. I wouldn't say they are totally digital tool specific.. the things discussed are more general art theory that you could apply to other mediums. As for direction of the channel - I'm just learning as I go and do like that are many possibilities for the type of content I could make there. I'm enjoying the editing process and the medium - YouTube is one of the better and more creative social networks at the moment in my opinion.
 
-*Related: [Recent works and quick update](/blog/2025-04-19-recent-works-and-update)*
+*Related: [Recent works and quick update](https://bledley.xyz/2025-04-19-recent-works-and-update/)*
+
 
 ---
 

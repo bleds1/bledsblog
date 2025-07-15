@@ -46,7 +46,7 @@ Now in your lf config *(~/.config/lfrc)* you will need the following options set
     set sixel true
 ```
 
-*Related: [Significantly reduce video file size with ffmpeg](/blog/2025-03-23-significantly-reduce-video-size-with-ffmpeg/)*
+*Related: [Significantly reduce video file size with ffmpeg](https://bledley.xyz/2025-03-23-significantly-reduce-video-size-with-ffmpeg)*
 
 ---
 
