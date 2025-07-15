@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>Significantly reduce video file size with ffmpeg | 🌀 bledleys blog</title>
 <meta name="title" content="Significantly reduce video file size with ffmpeg" />
-<meta name="description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I&rsquo;ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we&rsquo;ve got to work out how we&rsquo;re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an Android phone with Google Photos or something and that&rsquo;s a pretty nasty chunk out of your free storage allowance." />
+<meta name="description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I&rsquo;ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we&rsquo;ve got to work out how we&rsquo;re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an phone with limited cloud storage for photos and videos and that&rsquo;s a pretty nasty chunk out of your free storage allowance." />
 <meta name="keywords" content="linux,video," />
 
 
 <meta property="og:url" content="http://localhost:1313/significantly-reduce-video-file-size-with-ffmpeg/">
   <meta property="og:site_name" content="🌀 bledleys blog">
   <meta property="og:title" content="Significantly reduce video file size with ffmpeg">
-  <meta property="og:description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an Android phone with Google Photos or something and that’s a pretty nasty chunk out of your free storage allowance.">
+  <meta property="og:description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an phone with limited cloud storage for photos and videos and that’s a pretty nasty chunk out of your free storage allowance.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -28,16 +28,16 @@
 
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Significantly reduce video file size with ffmpeg">
-  <meta name="twitter:description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an Android phone with Google Photos or something and that’s a pretty nasty chunk out of your free storage allowance.">
+  <meta name="twitter:description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an phone with limited cloud storage for photos and videos and that’s a pretty nasty chunk out of your free storage allowance.">
 
 
 
 
   <meta itemprop="name" content="Significantly reduce video file size with ffmpeg">
-  <meta itemprop="description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an Android phone with Google Photos or something and that’s a pretty nasty chunk out of your free storage allowance.">
+  <meta itemprop="description" content="I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I’ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we’ve got to work out how we’re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an phone with limited cloud storage for photos and videos and that’s a pretty nasty chunk out of your free storage allowance.">
   <meta itemprop="datePublished" content="2025-03-23T10:42:48+00:00">
   <meta itemprop="dateModified" content="2025-03-23T10:42:48+00:00">
-  <meta itemprop="wordCount" content="331">
+  <meta itemprop="wordCount" content="329">
   <meta itemprop="keywords" content="Linux,Video">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -233,16 +233,15 @@
 </p>
 
 <content>
-  <p>I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I&rsquo;ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we&rsquo;ve got to work out how we&rsquo;re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an Android phone with Google Photos or something and that&rsquo;s a pretty nasty chunk out of your free storage allowance.</p>
+  <p>I was recently asked to record someones short performance at a gig on my phone. I obliged of course but I&rsquo;ve got to admit dealing with video footage on phones is not all that fun to me. Mostly because of the huge file sizes. Then we&rsquo;ve got to work out how we&rsquo;re going to transfer it to a computer for some post processing and send it on. The piece of video in question was around 5 gigs in size. You take this on an phone with limited cloud storage for photos and videos and that&rsquo;s a pretty nasty chunk out of your free storage allowance.</p>
 <p>Anyways, I got it across to computer and ran some noise reduction processes on it in Kdenlive. The final output was still a massive file and I needed to send it via wetransfer where it was still way, way over the file size limitation of 2 gigs.</p>
-<p>Thankfully I have this nice little piece of code bookmarked for such situations and I thought I should share it here for your use and easy reference. Make sure you have ffmpeg installed and run this command on your file in the terminal. Replace input and output.mp4 with the name of your file. Be warned this process needs to be allowed to run in the terminal without being disturbed and can take quite some time. I can&rsquo;t explain the technicals of it but it goes through frame and frame and runs some compression on it. It  may take a quite a long time even on a short video depending on the power of your machine.</p>
+<p>Thankfully I have this nice little piece of code bookmarked for such situations and I thought I should share it here for your use and easy reference. Make sure you have ffmpeg installed and run this command on your file in the terminal. Replace input and output.mp4 with the name of your file.</p>
+<p>Be warned this process needs to be allowed to run in the terminal without being disturbed. I can&rsquo;t explain the technicals of it but it goes through frame and frame and runs some compression on it. It  may take a quite a long time even on a short video depending on the power of your machine.</p>
 <p>I managed to get a 5 gig file down to under 500 mb! with absolutely no noticeable difference in resolution or sound quality. For me that&rsquo;s worth the waiting time. Try it out and be patient -  It just works.</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>ffmpeg -i input.mp4  -vcodec libx265 -crf <span style="color:#40a070">28</span> output.mp4
-</span></span></code></pre></div><p><a href="mailto:bledley@posteo.com">✉️Reply by Email</a></p>
-<p><a href="https://bledley.xyz/index.xml">📰  Subscribe with RSS</a></p>
-<h2 id="related">Related</h2>
-<p><a href="/posts/2023-01-27-getting-started-with-doom-emacs/">Getting Started with Doom Emacs</a></p>
-<p><a href="/posts/2023-12-01-what-the-hell-is-org-mode/">What the hell is Org-Mode?</a></p>
+</span></span></code></pre></div><p><em>Related: <a href="/blog/2025-03-26-images-previews-in-lf-file-manager/">Image previews in lf file manager</a></em></p>
+<hr>
+<p><em>Leave a comment by <a href="mailto:bledley@posteo.com">email</a> or you can find me on the <a href="https://mastodon.social/@bledley">Fediverse</a></em></p>
 
 </content>
 <p>

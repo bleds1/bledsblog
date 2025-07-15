@@ -46,14 +46,10 @@ Now in your lf config *(~/.config/lfrc)* you will need the following options set
     set sixel true
 ```
 
-[✉️Reply by Email](mailto:bledley@posteo.com)
+*Related: [Significantly reduce video file size with ffmpeg](/blog/2025-03-23-significantly-reduce-video-size-with-ffmpeg/)*
 
-[📰  Subscribe with RSS](https://bledley.xyz/index.xml)
+---
 
-
-## Related Posts
-
-[Significantly reduce video file size with ffmpeg](/posts/2025-03-23-significantly-reduce-video-size-with-ffmpeg/)
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*
 
 
-[Getting Started with Doom Emacs](/posts/2023-01-27-getting-started-with-doom-emacs/)

@@ -1,7 +1,7 @@
 ---
-title: "How I Use Org Mode Part One"
+title: "How I'm using Org Mode"
 date: 2025-06-25T11:40:08+01:00
-tags: ['emacs','org']
+tags: ['emacs']
 ---
 
 Since the last time I wrote about [Org mode](https://orgmode.org/) and my [Doom Emacs](https://github.com/doomemacs/doomemacs) set up I feel like some things will have changed. In fact, who am I kidding.. it's always changing. The basic principles of my [GTD](https://gettingthingsdone.com/) and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I'm at a good place to record my current process and way of working here. 
@@ -235,16 +235,7 @@ A big part of my system not mentioned here is that I have some other folders rel
 
 If you want to dive into my full messy [Doom Emacs config](https://github.com/bleds1/dotfiles/tree/main/.doom.d) then you can find my dotfiles [here on Github](https://github.com/bleds1).. I push changes quite often and I will cover my Org-Roam note taking system in a future post.
 
-[✉️Reply by Email](mailto:bledley@posteo.com)
-
-[📰  Subscribe with RSS](/index.xml)
-
-
-## Related
-
-[Getting Started with Doom Emacs](/posts/2023-01-27-getting-started-with-doom-emacs/)
-
-[How to install Doom Emacs on Termux](/posts/2023-07-23-how-to-install-doom-emacs-on-termux/)
+*Related: [Being Less Evil](/blog/2025-07-08-being-less-evil)*
 
 ---
 

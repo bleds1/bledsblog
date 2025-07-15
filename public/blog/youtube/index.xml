@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Painting on 🌀 bledleys blog</title>
-    <link>http://localhost:1313/blog/painting/</link>
-    <description>Recent content in Painting on 🌀 bledleys blog</description>
+    <title>Youtube on 🌀 bledleys blog</title>
+    <link>http://localhost:1313/blog/youtube/</link>
+    <description>Recent content in Youtube on 🌀 bledleys blog</description>
     <generator>Hugo</generator>
     <language>en-gb</language>
     <copyright>copyright 🄯 2025, bledley.</copyright>
     <lastBuildDate>Wed, 21 Aug 2024 11:55:34 +0100</lastBuildDate>
-    <atom:link href="http://localhost:1313/blog/painting/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/blog/youtube/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Drawing and Painting in Krita: Youtube</title>
       <link>http://localhost:1313/drawing-and-painting-in-krita-youtube/</link>

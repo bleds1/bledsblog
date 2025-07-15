@@ -5,17 +5,17 @@
   <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>How to Install Doom Emacs on Termux | 🌀 bledleys blog</title>
-<meta name="title" content="How to Install Doom Emacs on Termux" />
+<title>Installing Doom Emacs on Termux | 🌀 bledleys blog</title>
+<meta name="title" content="Installing Doom Emacs on Termux" />
 <meta name="description" content="
-I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve just started using Emacs and Org mode for nearly everything.. There&rsquo;s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it&rsquo;s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better. There&rsquo;s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I&rsquo;m not a massive phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I&rsquo;m also a big fan of just launching into a blank &ldquo;scratch&rdquo; buffer to do any writing, drafting or quick capture." />
+I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve just started using Emacs and Org mode for nearly everything.. There&rsquo;s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it&rsquo;s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better." />
 <meta name="keywords" content="emacs,android,termux," />
 
 
-<meta property="og:url" content="http://localhost:1313/how-to-install-doom-emacs-on-termux/">
+<meta property="og:url" content="http://localhost:1313/installing-doom-emacs-on-termux/">
   <meta property="og:site_name" content="🌀 bledleys blog">
-  <meta property="og:title" content="How to Install Doom Emacs on Termux">
-  <meta property="og:description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better. There’s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I’m not a massive phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I’m also a big fan of just launching into a blank “scratch” buffer to do any writing, drafting or quick capture.">
+  <meta property="og:title" content="Installing Doom Emacs on Termux">
+  <meta property="og:description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better.">
   <meta property="og:locale" content="en_gb">
   <meta property="og:type" content="article">
     <meta property="article:section" content="blog">
@@ -29,17 +29,17 @@ I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve 
 
 
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="How to Install Doom Emacs on Termux">
-  <meta name="twitter:description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better. There’s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I’m not a massive phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I’m also a big fan of just launching into a blank “scratch” buffer to do any writing, drafting or quick capture.">
+  <meta name="twitter:title" content="Installing Doom Emacs on Termux">
+  <meta name="twitter:description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better.">
 
 
 
 
-  <meta itemprop="name" content="How to Install Doom Emacs on Termux">
-  <meta itemprop="description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better. There’s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I’m not a massive phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I’m also a big fan of just launching into a blank “scratch” buffer to do any writing, drafting or quick capture.">
+  <meta itemprop="name" content="Installing Doom Emacs on Termux">
+  <meta itemprop="description" content="I used to think having Emacs on a phone was a bit much..but recently I’ve just started using Emacs and Org mode for nearly everything.. There’s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it’s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better.">
   <meta itemprop="datePublished" content="2023-07-23T15:00:18+01:00">
   <meta itemprop="dateModified" content="2023-07-23T15:00:18+01:00">
-  <meta itemprop="wordCount" content="728">
+  <meta itemprop="wordCount" content="744">
   <meta itemprop="keywords" content="Emacs,Android,Termux">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
@@ -225,7 +225,7 @@ I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve 
 </header>
   <main>
 
-<h1>How to Install Doom Emacs on Termux</h1>
+<h1>Installing Doom Emacs on Termux</h1>
 <p>
   <i>
     <time datetime='2023-07-23'>
@@ -236,7 +236,8 @@ I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve 
 
 <content>
   <p><img src="/2023-07-23-how-to-install-doom-emacs-on-termux/2023-07-23-doom-emacs-termux-screenshot.png" alt="Image 1"></p>
-<p>I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve just started using Emacs and Org mode for nearly everything.. There&rsquo;s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it&rsquo;s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better. There&rsquo;s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I&rsquo;m not a <em>massive</em> phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I&rsquo;m also a big fan of just launching into a blank &ldquo;<em>scratch</em>&rdquo; buffer to do any writing, drafting or quick capture.</p>
+<p>I used to think having Emacs on a phone was a bit much..but recently I&rsquo;ve just started using Emacs and Org mode for nearly everything.. There&rsquo;s not a great selection of apps on Android for accessing Org files, the best solution to me was to just get Emacs with it&rsquo;s fully fledged Org on mobile. The newish GUI Android Emacs app is a bit strange and I swiftly uninstalled it. The Termux terminal version however, works much better.</p>
+<p>There&rsquo;s not a whole load of info out there about how to run Doom Emacs on Termux but I managed to figure it out and have been impressed with how well it works. I&rsquo;m not a <em>massive</em> phone user and do the bulk of stuff on a laptop but It is pretty nice to be able to view my Org agenda or add something quick to my daily note from mobile. I&rsquo;m also a big fan of just launching into a blank &ldquo;<em>scratch</em>&rdquo; buffer to do any writing, drafting or quick capture. The evil-mode keybinds make Emacs quite managable with a phone keyboard lacking <em>&lsquo;Meta&rsquo;</em> and <em>&lsquo;Ctrl&rsquo;</em> keys.</p>
 <p><strong>1.  Install Emacs on Termux</strong></p>
 <p>If you don&rsquo;t have Termux already, bookmark this post and get yourself set up with that from F-Droid. You may want to get to know it a little before getting into this stuff. When you&rsquo;re ready for Emacs then..</p>
 <div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sh" data-lang="sh"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span>    pkg install emacs
@@ -266,7 +267,7 @@ The Vterm pop up terminal is pretty useful in Termux because of the lack of scre
 </span></span></code></pre></div><p><strong>Keeping files in sync</strong>
 I use Dropbox with Dropsync because the official Dropbox app on Android is weird and won’t let you store the directory offline on your device.. Syncthing would be another option to use here but you will only be able sync your files on a local wifi.</p>
 <p>That&rsquo;s about it for now. This should be enough to get you up and running. Enjoy your tiny little Emacs.</p>
-<h1 id="links">Links</h1>
+<h2 id="links">Links</h2>
 <p><a href="https://github.com/doomemacs/doomemacs">Doom Emacs Github</a></p>
 <p><a href="https://github.com/termux/termux-app">Termux Github</a></p>
 <p><a href="https://f-droid.org/packages/com.termux/">Termux on F-Droid</a></p>

@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>How I&#39;m using Org Mode | 🌀 bledleys blog</title>
+<meta name="title" content="How I&#39;m using Org Mode" />
+<meta name="description" content="Since the last time I wrote about Org mode and my Doom Emacs set up I feel like some things will have changed. In fact, who am I kidding.. it&rsquo;s always changing. The basic principles of my GTD and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I&rsquo;m at a good place to record my current process and way of working here." />
+<meta name="keywords" content="emacs," />
+
+
+<meta property="og:url" content="http://localhost:1313/how-im-using-org-mode/">
+  <meta property="og:site_name" content="🌀 bledleys blog">
+  <meta property="og:title" content="How I&#39;m using Org Mode">
+  <meta property="og:description" content="Since the last time I wrote about Org mode and my Doom Emacs set up I feel like some things will have changed. In fact, who am I kidding.. it’s always changing. The basic principles of my GTD and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I’m at a good place to record my current process and way of working here.">
+  <meta property="og:locale" content="en_gb">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2025-06-25T11:40:08+01:00">
+    <meta property="article:modified_time" content="2025-06-25T11:40:08+01:00">
+    <meta property="article:tag" content="Emacs">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="How I&#39;m using Org Mode">
+  <meta name="twitter:description" content="Since the last time I wrote about Org mode and my Doom Emacs set up I feel like some things will have changed. In fact, who am I kidding.. it’s always changing. The basic principles of my GTD and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I’m at a good place to record my current process and way of working here.">
+
+
+
+
+  <meta itemprop="name" content="How I&#39;m using Org Mode">
+  <meta itemprop="description" content="Since the last time I wrote about Org mode and my Doom Emacs set up I feel like some things will have changed. In fact, who am I kidding.. it’s always changing. The basic principles of my GTD and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I’m at a good place to record my current process and way of working here.">
+  <meta itemprop="datePublished" content="2025-06-25T11:40:08+01:00">
+  <meta itemprop="dateModified" content="2025-06-25T11:40:08+01:00">
+  <meta itemprop="wordCount" content="1735">
+  <meta itemprop="keywords" content="Emacs">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  :root {
+    --width: 720px;
+    --font-main: Verdana, sans-serif;
+    --font-secondary: Verdana, sans-serif;
+    --font-scale: 1em;
+    --background-color: #fff;
+    --heading-color: #222;
+    --text-color: #444;
+    --link-color: #3273dc;
+    --visited-color: #8b6fcb;
+    --code-background-color: #f2f2f2;
+    --code-color: #222;
+    --blockquote-color: #222;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --background-color: #01242e;
+      --heading-color: #eee;
+      --text-color: #ddd;
+      --link-color: #8cc2dd;
+      --visited-color: #8b6fcb;
+      --code-background-color: #000;
+      --code-color: #ddd;
+      --blockquote-color: #ccc;
+    }
+  }
+
+  body {
+    font-family: var(--font-secondary);
+    font-size: var(--font-scale);
+    margin: auto;
+    padding: 20px;
+    max-width: var(--width);
+    text-align: left;
+    background-color: var(--background-color);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: var(--text-color);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-main);
+    color: var(--heading-color);
+  }
+
+  a {
+    color: var(--link-color);
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  a:hover {
+    text-decoration: underline;
+  }
+
+  nav a {
+    margin-right: 8px;
+  }
+
+  strong,
+  b {
+    color: var(--heading-color);
+  }
+
+  button {
+    margin: 0;
+    cursor: pointer;
+  }
+
+  time {
+    font-family: monospace;
+    font-style: normal;
+    font-size: 15px;
+  }
+
+  main {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  hr {
+    border: 0;
+    border-top: 1px dashed;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    font-family: monospace;
+    padding: 2px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: var(--code-color);
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px 0;
+    text-align: center;
+  }
+
+  .title:hover {
+    text-decoration: none;
+  }
+
+  .title h1 {
+    font-size: 1.5em;
+  }
+
+  .inline {
+    width: auto !important;
+  }
+
+  .highlight,
+  .code {
+    padding: 1px 15px;
+    background-color: var(--code-background-color);
+    color: var(--code-color);
+    border-radius: 3px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    overflow-x: auto;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: var(--visited-color);
+  }
+
+</style>
+
+<link rel="alternate"
+      type="application/rss+xml"
+      href="http://localhost:1313//index.xml"
+      title="🌀 bledleys blog">
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>🌀 bledleys blog</h2>
+</a>
+<nav>
+<a href="/">Blog</a>
+
+<a href="/follow/">Follow</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>How I&#39;m using Org Mode</h1>
+<p>
+  <i>
+    <time datetime='2025-06-25'>
+      25 Jun, 2025
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>Since the last time I wrote about <a href="https://orgmode.org/">Org mode</a> and my <a href="https://github.com/doomemacs/doomemacs">Doom Emacs</a> set up I feel like some things will have changed. In fact, who am I kidding.. it&rsquo;s always changing. The basic principles of my <a href="https://gettingthingsdone.com/">GTD</a> and note taking would be the same anywhere but little things get tweaked and optimized all the time. I think I&rsquo;m at a good place to record my current process and way of working here.</p>
+<h2 id="file-structure">File structure</h2>
+<p>Currently my org files for GTD look like this in the directory;</p>
+<p><strong>~/org</strong></p>
+<p><strong>archive.org</strong>     - completed todos get refiled to here</p>
+<p><strong>events.org</strong>      - calendar events and appointments</p>
+<p><strong>goals.org</strong>        - long term, midterm, short term goals</p>
+<p><strong>log.org</strong>           - one long file with datetree for daily notes/planning/fleeting thoughts</p>
+<p><strong>na.org</strong>           - tasks relating to a group I am a part of</p>
+<p><strong>per.org</strong>           - personal tasks end up here to be reviewed and executed</p>
+<p><strong>read.org</strong>          - for keeping track of books read or to read.</p>
+<p><strong>someday.org</strong>     - low priority todos I may do one day</p>
+<p><strong>watch.org</strong>        - for keeping track of movies/shows to watch or watched.</p>
+<p><strong>work.org</strong>         - tasks relating to the world of work</p>
+<h2 id="todo-states">Todo states</h2>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-1.png" alt="Image 1"></p>
+<p>All created tasks have a state, the default being TODO. States can be as follows;</p>
+<p><strong>TODO (t)</strong>          - a task that needs doing</p>
+<p><strong>STRT (s)</strong>          - a task that I have started or am working on</p>
+<p><strong>WAIT (w)</strong>          - on hold for now. Put to sleep until I&rsquo;m ready to do it or delegated, waiting on something</p>
+<p><strong>PROJ (p)</strong>          - a project to me is anything that has multiple todos nested beneath to achieve completion</p>
+<p><strong>DONE (d)</strong>          - it&rsquo;s been completed</p>
+<p><strong>CANC (c)</strong>          - these just aren&rsquo;t happening or don&rsquo;t need to be done anymore for whatever reason</p>
+<p>I have some slightly modified todo statuses in my <em>watch.org</em> and <em>read.org</em> files as you can set status on a file by file basis. I don&rsquo;t think we need to go into that here but I use things like WATC or READ instead of the usual TODO.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>(<span style="color:#bb60d5">setq!</span> <span style="color:#bb60d5">org-todo-keywords</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>      <span style="color:#666">&#39;</span>((<span style="color:#0e84b5;font-weight:bold">sequence</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>         <span style="color:#4070a0">&#34;TODO(t)&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>         <span style="color:#4070a0">&#34;STRT(s!)&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>         <span style="color:#4070a0">&#34;WAIT(w!)&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>         <span style="color:#4070a0">&#34;PROJ(p)&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>         <span style="color:#4070a0">&#34;|&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>         <span style="color:#4070a0">&#34;DONE(d!)&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>         <span style="color:#4070a0">&#34;CANC(c!)&#34;</span> )))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>(<span style="color:#bb60d5">setq!</span> <span style="color:#bb60d5">org-todo-keyword-faces</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>      <span style="color:#666">&#39;</span>((<span style="color:#4070a0">&#34;TODO&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#cc4d3e&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>       (<span style="color:#4070a0">&#34;STRT&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#85C7A1&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>       (<span style="color:#4070a0">&#34;WAIT&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#83898d&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>       (<span style="color:#4070a0">&#34;PROJ&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#896ccc&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>       (<span style="color:#4070a0">&#34;DONE&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#2b8c63&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>       (<span style="color:#4070a0">&#34;CANC&#34;</span> <span style="color:#517918">:foreground</span> <span style="color:#4070a0">&#34;#5d6265&#34;</span> <span style="color:#517918">:weight</span> <span style="color:#bb60d5">bold</span>))))
+</span></span></code></pre></div><h2 id="tags-and-priorities">Tags and Priorities</h2>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-2.png" alt="Image 2"></p>
+<p>I try to keep my tags for these todo&rsquo;s quite limited but the first area I think about it priority. Priorities are a little odd in org. By default it&rsquo;s a system where you can mark things as A,B,C priority. When searching for tasks every un-prioritised todo defaults to B which I&rsquo;m not keen on. One approach we can take to deal with that is to give every single task an A,B or C priority. Another way is a shift in thinking -  sometimes I just think of it as the next 3 things I&rsquo;m going to do.. Do A, then B, then C. These priorities are set very easily with shift up and down.</p>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-3.png" alt="Image 3"></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>(<span style="color:#bb60d5">after!</span> <span style="color:#bb60d5">org</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  (<span style="color:#007020;font-weight:bold">setq</span> <span style="color:#bb60d5">org-tag-alist</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>        <span style="color:#666">&#39;</span>(
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>             (<span style="color:#4070a0">&#34;@call&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>             (<span style="color:#4070a0">&#34;@email&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>             (<span style="color:#4070a0">&#34;@errand&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>             (<span style="color:#4070a0">&#34;@games&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>             (<span style="color:#4070a0">&#34;@home&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>             (<span style="color:#4070a0">&#34;@listen&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>             (<span style="color:#4070a0">&#34;@post&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>             (<span style="color:#4070a0">&#34;@read&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>             (<span style="color:#4070a0">&#34;@research&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>             (<span style="color:#4070a0">&#34;@sys&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>             (<span style="color:#4070a0">&#34;@watch&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>             (<span style="color:#4070a0">&#34;@web&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>             (<span style="color:#4070a0">&#34;per&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>             (<span style="color:#4070a0">&#34;na&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>             (<span style="color:#4070a0">&#34;work&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>             (<span style="color:#4070a0">&#34;fleeting&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>             (<span style="color:#4070a0">&#34;posted&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>             (<span style="color:#4070a0">&#34;refile&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>             (<span style="color:#4070a0">&#34;recur&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>               ))
+</span></span></code></pre></div><p>These are my current tags I use for todos and fleeting thoughts. The ones beginning with <em>@</em> symbol are contexts. So, say I am working on domestic tasks around the house I can filter things down by searching for the <em>@home</em> tag. If I&rsquo;m working at my computer (system) I can pull up the <em>@sys</em> tagged tasks.</p>
+<h2 id="org-capture-templates">Org capture templates</h2>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-4.png" alt="Image 4"></p>
+<p>Capturing new tasks is fast and easy using org-capture-templates. A dialogue for more specific org-capture will pop up with <em>&lsquo;C-c-c&rsquo; or F6</em></p>
+<p>The options I&rsquo;m presented with there are;</p>
+<p><strong>Todo (t)</strong></p>
+<p><em>(Nested beneath t)</em></p>
+<p><strong>-(p) Personal</strong>      - add a new todo to <em>per.org</em> under the heading <em>&ldquo;INBOX:&rdquo;</em></p>
+<p><strong>-(n) NA</strong>               - add a new todo to <em>na.org</em> under the heading <em>&ldquo;INBOX:&rdquo;</em></p>
+<p><strong>-(w) Work</strong>          - add a new todo to <em>work.org</em> under the heading <em>&ldquo;INBOX:&rdquo;</em></p>
+<p><strong>-(d) Done</strong>            - add some task immediately with DONE status to <em>archive.org</em>. This is for things that come up and get completed that are not already in the system. By logging these they show the time they got completed on agenda views.</p>
+<p><strong>Event (e)</strong>              - add an entry to <em>event.org</em>. This file is synced with org-cal-dav so appointments show up everywhere I access my calendar. They are headlines without a todo status but have a <em>SCHEDULED</em> date stamp.</p>
+<p><strong>Watch (w)</strong></p>
+<p><em>(Nested beneath w)</em></p>
+<p><strong>-(t) To Watch</strong>      - films or shows I want to watch added to <em>watch.org</em></p>
+<p><strong>-(d) Watched</strong>       - when I watch something it gets logged as done with timestamp that shows on agenda views</p>
+<p><strong>Planning (p)</strong></p>
+<p><em>(Nested beneath p)</em></p>
+<p><strong>-(p) Day Plan</strong>       - add a quick checklist to my <em>log.org</em> (Primary Objectives for the day)</p>
+<p><strong>-(r) End of day review</strong> - A few questions for EOD, What did I get done? what will I do next? etc. I don&rsquo;t use this as often as I should. I tend to use the following more consistently.</p>
+<p><strong>-(w) End of week review</strong> - Same as above but with regards to the whole week. After a review of what I got done this becomes a plan for the next week as it has a prompt &ldquo;What&rsquo;s next?&rdquo;.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 1</span><span>(<span style="color:#bb60d5">after!</span> <span style="color:#bb60d5">org</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 2</span><span>  (<span style="color:#bb60d5">setq!</span> <span style="color:#bb60d5">org-capture-templates</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 3</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 4</span><span>        <span style="color:#666">&#39;</span>(
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 5</span><span>          (<span style="color:#4070a0">&#34;t&#34;</span> <span style="color:#4070a0">&#34; Todo&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 6</span><span>          (<span style="color:#4070a0">&#34;tp&#34;</span> <span style="color:#4070a0">&#34;󰭕 Personal&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file+headline</span> <span style="color:#4070a0">&#34;~/org/per.org&#34;</span> <span style="color:#4070a0">&#34;INBOX:&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 7</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-todo.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 8</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f"> 9</span><span>           (<span style="color:#4070a0">&#34;tn&#34;</span> <span style="color:#4070a0">&#34; NA&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file+headline</span> <span style="color:#4070a0">&#34;~/org/na.org&#34;</span> <span style="color:#4070a0">&#34;INBOX:&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">10</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-todo.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">11</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">12</span><span>           (<span style="color:#4070a0">&#34;tw&#34;</span> <span style="color:#4070a0">&#34; Work&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file+headline</span> <span style="color:#4070a0">&#34;~/org/work.org&#34;</span> <span style="color:#4070a0">&#34;INBOX:&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">13</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-todo.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">14</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">15</span><span>           (<span style="color:#4070a0">&#34;td&#34;</span> <span style="color:#4070a0">&#34; Done&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/archive.org&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">16</span><span>             (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-done.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">17</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">18</span><span>           (<span style="color:#4070a0">&#34;e&#34;</span> <span style="color:#4070a0">&#34; Event&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/events.org&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">19</span><span>             <span style="color:#4070a0">&#34;* %? \n %^t&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">20</span><span>          (<span style="color:#4070a0">&#34;w&#34;</span> <span style="color:#4070a0">&#34; Watch&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">21</span><span>           (<span style="color:#4070a0">&#34;wt&#34;</span> <span style="color:#4070a0">&#34;󰿎 To Watch&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file+headline</span> <span style="color:#4070a0">&#34;~/org/watch.org&#34;</span> <span style="color:#4070a0">&#34;TO WATCH:&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">22</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-towatch.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">23</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">24</span><span>           (<span style="color:#4070a0">&#34;wd&#34;</span> <span style="color:#4070a0">&#34;󰎁 Watched&#34;</span> <span style="color:#bb60d5">entry</span> (<span style="color:#bb60d5">file+headline</span> <span style="color:#4070a0">&#34;~/org/watch.org&#34;</span> <span style="color:#4070a0">&#34;WATCHED:&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">25</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-watched.txt&#34;</span>) <span style="color:#517918">:prepend</span> <span style="color:#60add5">t</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">26</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">27</span><span>           (<span style="color:#4070a0">&#34;p&#34;</span> <span style="color:#4070a0">&#34; Plan&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">28</span><span>           (<span style="color:#4070a0">&#34;pd&#34;</span> <span style="color:#4070a0">&#34;󰃶 Daily Plan&#34;</span> <span style="color:#bb60d5">plain</span> (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/log.org&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">29</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-bod.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">30</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">31</span><span>           (<span style="color:#4070a0">&#34;pr&#34;</span> <span style="color:#4070a0">&#34;󰱄 Daily Review&#34;</span> <span style="color:#bb60d5">plain</span> (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/log.org&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">32</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-eod.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">33</span><span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">34</span><span>           (<span style="color:#4070a0">&#34;pw&#34;</span> <span style="color:#4070a0">&#34;󱛡 Weekly Review&#34;</span> <span style="color:#bb60d5">plain</span> (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/log.org&#34;</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">35</span><span>            (<span style="color:#bb60d5">file</span> <span style="color:#4070a0">&#34;~/org/tpl/tpl-weekly.txt&#34;</span>))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">36</span><span>            )
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">37</span><span>           ))
+</span></span></code></pre></div><p>Most thoughts throughout the day will be captured to my journal <em>log.org</em>. Tasks will be captured to the relevant todo file for refiling, tagging, scheduling and organisation. Each todo file (<em>personal/na/work</em>) has the following headings <em>INBOX:</em> and <em>NEXT:</em>. <em>INBOX</em> is where things sit until they have been prioritised, scheduled or tagged, by default they have one tag <em>:refile:</em> inherited from the heading making them easy to locate from agenda views. They get queued up under the <em>NEXT:</em> heading suggesting the order I want to complete things in. An agenda view search for the <em>:refile:</em> tag is then a unified inbox where I can sort tasks across the different areas.</p>
+<h2 id="agenda-views">Agenda views</h2>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-5.png" alt="Image 5"></p>
+<p>I don&rsquo;t go to crazy with these. <em>C-c-TAB</em> or <em>C-c-a-a</em> brings up my default agenda view. A timeline of the current day that shows both events and scheduled tasks or deadlines. I leave the agenda view open and sticky in the background and have set up a key to toggle back and forth from whatever file I&rsquo;m in with <em>C-c 9</em></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#60a0b0;font-style:italic">;; Note this keybind requires that the agenda is already open in the background or it will just go to an empty buffer</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(<span style="color:#bb60d5">global-set-key</span> (<span style="color:#bb60d5">kbd</span> <span style="color:#4070a0">&#34;C-c 9&#34;</span>) (<span style="color:#007020">lambda</span> ()
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>                              (<span style="color:#bb60d5">interactive</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>                              (<span style="color:#007020;font-weight:bold">if</span> (<span style="color:#06287e">string=</span> (<span style="color:#bb60d5">buffer-name</span>) <span style="color:#4070a0">&#34;*Org Agenda*&#34;</span>) (<span style="color:#bb60d5">previous-buffer</span>) (<span style="color:#bb60d5">switch-to-buffer</span> <span style="color:#4070a0">&#34;*Org Agenda*&#34;</span>))))
+</span></span></code></pre></div><h2 id="the-daily-logorg">The daily log.org</h2>
+<p><img src="/2025-06-25-how-i-use-org-mode-part-one/org-part-one-6.png" alt="Image 6"></p>
+<p>My main go to file during the day is my <em>log.org</em>. It&rsquo;s one long file that uses org-roam-dailies to create a date-tree journal with timestamped entries.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#60a0b0;font-style:italic">;; Capture template for my daily log entries</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(<span style="color:#007020;font-weight:bold">setq</span> <span style="color:#bb60d5">org-roam-dailies-capture-templates</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span>      <span style="color:#666">&#39;</span>((<span style="color:#4070a0">&#34;d&#34;</span> <span style="color:#4070a0">&#34;default&#34;</span> <span style="color:#bb60d5">entry</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>         <span style="color:#4070a0">&#34;* %&lt;%H:%M&gt; %?&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>         <span style="color:#517918">:target</span> (<span style="color:#bb60d5">file+datetree</span> <span style="color:#4070a0">&#34;log.org&#34;</span> <span style="color:#bb60d5">week</span>)))
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>      )
+</span></span></code></pre></div><p>I have a keyboard shortcut that can quick capture an entry to the log from anywhere throughout the day. The default <em>&lsquo;org-roam-dailies&rsquo;</em> capture a separate file for each day and I started to find that counter productive. I would rarely ever look back on the individual files. With one long log I can quickly scan back over the past few days or weeks and information stays fresh unless I decide to fold a heading away or narrow the buffer to just today&rsquo;s date. Sometimes I create a little check list here at the beginning of the day for my main objectives, often I just ramble and capture fleeting thoughts throughout the day.</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f0f0f0;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-lisp" data-lang="lisp"><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">1</span><span><span style="color:#60a0b0;font-style:italic">;; Keyboard shortcut to get to my daily log on today&#39;s date</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">2</span><span>(<span style="color:#bb60d5">global-set-key</span> (<span style="color:#bb60d5">kbd</span> <span style="color:#4070a0">&#34;C-c d&#34;</span>) <span style="color:#517918">&#39;org-roam-dailies-goto-today</span>)
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">3</span><span><span style="color:#60a0b0;font-style:italic">;; Alternative that uses leader key. Space d.</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">4</span><span>(<span style="color:#bb60d5">map!</span> <span style="color:#517918">:leader</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">5</span><span>      <span style="color:#517918">:desc</span> <span style="color:#4070a0">&#34;org-roam-dailies-goto-today&#34;</span>
+</span></span><span style="display:flex;"><span style="white-space:pre;-webkit-user-select:none;user-select:none;margin-right:0.4em;padding:0 0.4em 0 0.4em;color:#7f7f7f">6</span><span>      <span style="color:#4070a0">&#34;d&#34;</span> <span style="color:#06287e">#&#39;</span><span style="color:#bb60d5">org-roam-dailies-goto-today</span>)
+</span></span></code></pre></div><p>So that covers the basic foundation of my system in org mode. Hopefully, this starts to show why no other program, app or text editor comes close for me. Being able to have my notes, journal, tasks and calendar all under the one roof, whilst also being able to navigate my entire file system with Vim keybindings in Emacs is incredibly efficient and endlessly customizable. The reason I haven&rsquo;t gone explicitly in to all the keybinds and functions I use is that you will likely want to design your own based on the way you do things. We&rsquo;ve barely even scratched the surface of all the things Emacs and Org-mode is capable of here.</p>
+<p>I keep my org-files in sync with my mobile with <a href="https://syncthing.net/">Syncthing</a> and access them there for some basic editing with <a href="https://orgro.org/">Orgro</a>. Of course we don&rsquo;t have all the features of Emacs there but I can quickly take a few notes to one of my files if needs be. My calendar events in <em>events.org</em> sync with <a href="https://github.com/dengste/org-caldav/blob/master/doc/org-caldav.org">org-cal-dav</a> to the <a href="https://www.fossify.org/">Fossify Calendar</a> app with <a href="https://www.davx5.com/">Davx5</a>.</p>
+<p>A big part of my system not mentioned here is that I have some other folders related to note-taking with <a href="https://www.orgroam.com/">Org-Roam</a>. I feel my <a href="https://zettelkasten.de/introduction/">Zettelkasten</a> system is a separate one to my GTD related things although there can be some cross-over.</p>
+<p>If you want to dive into my full messy <a href="https://github.com/bleds1/dotfiles/tree/main/.doom.d">Doom Emacs config</a> then you can find my dotfiles <a href="https://github.com/bleds1">here on Github</a>.. I push changes quite often and I will cover my Org-Roam note taking system in a future post.</p>
+<p><em>Related: <a href="/blog/2025-07-08-being-less-evil">Being Less Evil</a></em></p>
+<hr>
+<p><em>Leave a comment by <a href="mailto:bledley@posteo.com">email</a> or you can find me on the <a href="https://mastodon.social/@bledley">Fediverse</a></em></p>
+
+</content>
+<p>
+  
+  <a href="http://localhost:1313/blog/emacs/">#Emacs</a>
+  
+</p>
+
+  </main>
+  <footer><footer style="padding:25px 0;">
+
+    <p>
+    <i>Powered by <a href="https://janraasch.github.io/hugo-bearblog/">Hugo ʕ•ᴥ•ʔ Bear</a>
+</p>
+<small>
+    <a href="mailto:bledley@posteo.com" target="_blank">✉ Email</a> |
+    <a href="https://mastodon.social/@bledley" target="_blank">🐘 Mastodon</a> |
+    <a href="https://pixelfed.social/bledley" target="_blank">🎨 Pixelfed</a> |
+    <a href="/index.xml" target="_blank">📰 RSS</a>
+</small>
+
+  </footer>
+</footer>
+
+  
+</body>
+
+</html>
