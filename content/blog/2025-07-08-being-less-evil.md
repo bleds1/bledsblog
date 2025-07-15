@@ -31,7 +31,7 @@ It's a bit like picking up and learning a new game. You don't know the buttons a
 There's a huge amount of learning materials about out there online but the majority of it is based around the default key-binds. I was feeling a bit like I'd absorbed all the Doom content out there. I'm currently looking at [Mickey Peterson's Mastering Emacs](https://www.masteringemacs.org/) book and watching video content from [Protesilaos](https://protesilaos.com/) and [System Crafters](https://systemcrafters.net/).. there's so many things to learn about Emacs that have just opened up to me.
 
 
-*Related:* [How I'm using Org-Mode](https://bledley.xyz/2025-06-25-how-i-use-org-mode-part-one/)
+*Related:* [How I'm using Org-Mode](/how-im-using-org-mode/)
 
 ---
 

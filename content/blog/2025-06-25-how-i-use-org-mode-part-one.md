@@ -235,7 +235,7 @@ A big part of my system not mentioned here is that I have some other folders rel
 
 If you want to dive into my full messy [Doom Emacs config](https://github.com/bleds1/dotfiles/tree/main/.doom.d) then you can find my dotfiles [here on Github](https://github.com/bleds1).. I push changes quite often and I will cover my Org-Roam note taking system in a future post.
 
-*Related: [Being Less Evil](https://bledley.xyz/2025-07-08-being-less-evil)*
+*Related: [Being Less Evil](/being-less-evil)*
 
 ---
 

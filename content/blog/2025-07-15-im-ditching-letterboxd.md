@@ -24,18 +24,6 @@ Letterboxd can be useful but have you thought about just keeping a list? I keep 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 ---
 
 *Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*
