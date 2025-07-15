@@ -31,10 +31,6 @@ There’ll also be a related art exhibition in [City Screen Picturehouse](https:
 And look out for upcoming details of Making Waves Live on June 21st….. 
 All Navigators Art events are posted on 🔗 [bit.ly/nav-events](https://bit.ly/nav-events/)
 
-[✉️Reply by Email](mailto:bledley@posteo.com)
-
-[📰  Subscribe with RSS](https://bledley.xyz/index.xml)
-
 
 ## Related
 
@@ -50,3 +46,7 @@ All Navigators Art events are posted on 🔗 [bit.ly/nav-events](https://bit.ly/
 [Micklegate Arts Trail | charleshutchpress.co.uk](https://charleshutchpress.co.uk/micklegate-arts-trail-combines-art-with-music-spoken-word-and-film-from-today-to-june-15/)
 
 [Navigators Art |Instagram](https://www.instagram.com/navigatorsart/)
+
+---
+
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*

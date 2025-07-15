@@ -40,3 +40,7 @@ One thing I miss from Obsidian is the graph view. People are divided about the g
 Installing ORUI in Doom Emacs
 
 I've found Org-roam-ui to behave much better in Qutebrowser than I have others. Not sure what the reason for that is but I had some strange visual performance issues with Firefox based browsers and Brave - it works great for me in Qutebrowser.
+
+---
+
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*

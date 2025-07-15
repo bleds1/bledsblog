@@ -1,7 +1,7 @@
 +++
 title = "Follow"
 menu = "main"
-weight = 20
+weight = 10
 +++
 
 The best way to follow and read this blog is by using an RSS reader and adding the .xml link at the bottom of this page.. I have no tracking, comment or follow system.

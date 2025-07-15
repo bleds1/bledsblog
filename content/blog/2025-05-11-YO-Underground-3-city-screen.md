@@ -49,10 +49,6 @@ Tickets/Full info:
 
 Special thanks to: @yoyo.zine @bbcupload @whatsoccurringyork
 
-[✉️Reply by Email](mailto:bledley@posteo.com)
-
-[📰  Subscribe with RSS](https://bledley.xyz/index.xml)
-
 
 ## Related
 
@@ -64,3 +60,7 @@ Special thanks to: @yoyo.zine @bbcupload @whatsoccurringyork
 ## Links
 
 [Ticketsource booking](https://bit.ly/nav-events)
+
+---
+
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*

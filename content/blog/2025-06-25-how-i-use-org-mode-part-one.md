@@ -237,7 +237,7 @@ If you want to dive into my full messy [Doom Emacs config](https://github.com/bl
 
 [✉️Reply by Email](mailto:bledley@posteo.com)
 
-[📰  Subscribe with RSS](https://bledley.xyz/index.xml)
+[📰  Subscribe with RSS](/index.xml)
 
 
 ## Related
@@ -245,3 +245,7 @@ If you want to dive into my full messy [Doom Emacs config](https://github.com/bl
 [Getting Started with Doom Emacs](/posts/2023-01-27-getting-started-with-doom-emacs/)
 
 [How to install Doom Emacs on Termux](/posts/2023-07-23-how-to-install-doom-emacs-on-termux/)
+
+---
+
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*

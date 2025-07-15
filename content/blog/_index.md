@@ -1,5 +1,8 @@
 +++
 title = "Blog"
-menu = "main"
-weight = 100
+url = "/"
+ [menu]
+  [menu.main]
+  identifier = "blog"
+  weight = 1
 +++

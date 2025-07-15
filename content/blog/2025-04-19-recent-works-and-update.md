@@ -25,9 +25,6 @@ I also have some ideas brewing for [Youtube videos](https://www.youtube.com/@ble
 
 Including above some rough around the edges study stuff in [Krita](https://krita.org/en/) that I haven't posted here yet.
 
-[✉️Reply by Email](mailto:bledley@posteo.com)
-
-[📰  Subscribe with RSS](https://bledley.xyz/index.xml)
 
 ## Related Posts
 
@@ -37,3 +34,6 @@ Including above some rough around the edges study stuff in [Krita](https://krita
 
 [Getting Started with Doom Emacs](/posts/2023-01-27-getting-started-with-doom-emacs/)
 
+---
+
+*Leave a comment by [email](mailto:bledley@posteo.com) or you can find me on the [Fediverse](https://mastodon.social/@bledley)*
