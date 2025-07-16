@@ -2,7 +2,7 @@
 title = "I'm ditching Letterboxd"
 date = "2025-07-16T14:21:41+01:00"
 tags = ['film', 'socialmedia']
-draft = true
+draft = false
 +++
 
 Over the past few years [Letterboxd](https://letterboxd.com/) seems to have very quickly grown into ***the*** site for film lovers. I had a little time of thinking I could really get into it. I do like reading film reviews from regular people and I'm actually quite blown away by just how many movies some people watch. I probably manage  one or two films a week personally, sometimes none though, other times I'm really into an episodic show or something else takes up my free time.
