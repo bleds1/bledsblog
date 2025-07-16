@@ -18,11 +18,6 @@ ignoreErrors = ["error-disable-taxonomy"]
 # The "description" of your website. This is used in the meta data of your generated html.
 description = "Hugo + Bear = :heart:"
 
-#[[params.links.link]]
-# name = "RSS"
-# href = "/index.xml"
-# new_tab = true
-
 # The path to your "favicon". This should be a square (at least 32px x 32px) png-file.
 # Hint: It's good practise to also put a "favicon.ico"-file into your "static"-folder.
 # favicon = "images/favicon.png"
