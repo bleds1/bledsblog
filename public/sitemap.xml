@@ -5,7 +5,13 @@
     <loc>http://localhost:1313/follow/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
-    <lastmod>2025-07-16T14:21:41+01:00</lastmod>
+    <lastmod>2025-07-20T10:01:49+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/week-notes-2025-w29/</loc>
+    <lastmod>2025-07-20T10:01:49+01:00</lastmod>
+  </url><url>
+    <loc>http://localhost:1313/blog/weeknotes/</loc>
+    <lastmod>2025-07-20T10:01:49+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/blog/film/</loc>
     <lastmod>2025-07-16T14:21:41+01:00</lastmod>
@@ -32,9 +38,6 @@
     <lastmod>2025-07-15T11:34:54+01:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/week-notes-2025-w28/</loc>
-    <lastmod>2025-07-13T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/blog/weeknotes/</loc>
     <lastmod>2025-07-13T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/being-less-evil/</loc>
